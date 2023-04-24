@@ -35,9 +35,9 @@ function sortedSquaredArray(array) {
       console.log("resultingArr[insertionPoint]", resultingArr[insertionPoint])
       resultingArr[insertionPoint] = elementLeft ** 2
       pointer1 += 1
-    } else if (pointer1 === pointer2) {
+    } else if (elementLeft === elementRight) {
       resultingArr[insertionPoint] = elementLeft ** 2
-      break
+      pointer1 += 1
     }
     insertionPoint -= 1
   }
@@ -45,6 +45,7 @@ function sortedSquaredArray(array) {
 }
 
 // const array = [1, 2, 3, 5, 6, 8, 9]
-const array = [-7, -5, -4, 3, 6, 8, 9]
+// const array = [-7, -5, -4, 3, 6, 8, 9]
+const array = [-10, -5, 0, 5, 10]
 
 console.log(sortedSquaredArray(array))
